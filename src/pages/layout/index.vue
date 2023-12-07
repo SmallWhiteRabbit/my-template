@@ -1,3 +1,5 @@
-<template>布局</template>
-<script setup lang="ts"></script>
+<template>{{ $t("home") }} <navCom /></template>
+<script setup lang="ts">
+import navCom from "@/components/layout/nav.vue";
+</script>
 <style scoped></style>

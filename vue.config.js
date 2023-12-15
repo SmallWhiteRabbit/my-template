@@ -8,6 +8,9 @@ module.exports = defineConfig({
       require('unplugin-auto-import/webpack').default({
         resolvers: [ElementPlusResolver()],
         imports: ['vue', 'vue-router', 'pinia']
+      }),
+      require('unplugin-vue-components/webpack').default({
+        resolvers: [ElementPlusResolver()]
       })
     ]
   }

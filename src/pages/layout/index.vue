@@ -1,6 +1,6 @@
 <template>
-  {{ $t("home") }} <navCom />
-  <el-date-picker v-model="value1" type="monthrange" />
+  <navCom />
+  <router-view></router-view>
 </template>
 <script setup lang="ts">
 import navCom from "@/components/layout/nav.vue";

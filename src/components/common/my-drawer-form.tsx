@@ -3,7 +3,7 @@ import { IFormItemConfig } from "@/hooks/useBaseComponents";
 import Myform from "@/components/common/my-form";
 
 export default defineComponent({
-  name: "my-dialog-form",
+  name: "my-drawer-form",
   props: {
     formList: {
       type: Array<IFormItemConfig>,
@@ -32,7 +32,6 @@ export default defineComponent({
       dialogRef.value?.formRef.resetFields();
       visible.value = false;
     };
-
     const slots = {
       footer: () => {
         return (
@@ -47,7 +46,7 @@ export default defineComponent({
     };
     return (): JSX.Element => {
       return (
-        <el-dialog {...attrs} vModel={visible.value} v-slots={slots}>
+        <el-drawer {...attrs} vModel={visible.value} v-slots={slots}>
           <Myform
             class="my-filter-form"
             inline={true}
@@ -57,7 +56,7 @@ export default defineComponent({
             model={props.formData}
             ref={dialogRef}
           ></Myform>
-        </el-dialog>
+        </el-drawer>
       );
     };
   },

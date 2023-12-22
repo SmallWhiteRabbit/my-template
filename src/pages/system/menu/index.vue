@@ -29,6 +29,15 @@
     ref="dialogRef"
     @success="submitForm"
   ></my-dialog-form>
+
+  <my-drawer-form
+    :title="'新增'"
+    v-model:formData="State.formData"
+    :formList="formList"
+    :formRules="formRules"
+    ref="drawerRef"
+    @success="submitForm"
+  ></my-drawer-form>
 </template>
 <script setup lang="ts">
 import { filterList, tableList, formList, formRules } from "./config.ts";
@@ -42,6 +51,7 @@ const State = reactive({
   formData: {},
 });
 const dialogRef = ref();
+const drawerRef = ref();
 const { pageInfo, getList, tableData } = usePageTable(
   State.filterData,
   getDataList
@@ -54,8 +64,17 @@ const btnList = [
   {
     label: "新增",
     icon: "",
+    type: "primary",
     onClick() {
       dialogRef.value.visible = true;
+    },
+  },
+  {
+    label: "编辑",
+    icon: "",
+    type: "link",
+    onClick() {
+      drawerRef.value.visible = true;
     },
   },
 ];

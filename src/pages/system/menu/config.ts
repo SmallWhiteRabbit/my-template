@@ -20,16 +20,13 @@ const filterList = [
     is: "el-select",
     prop: "delStatus",
     label: "状态",
+    options: [{ label: "ii", value: 0 }],
   },
   {
-    is: "el-select",
-    prop: "delStatus",
-    label: "状态",
-  },
-  {
-    is: "el-select",
-    prop: "delStatus",
-    label: "状态",
+    is: "el-date-picker",
+    prop: "createTime",
+    label: "创建日期",
+    type: "daterange",
   },
 ];
 

@@ -1,4 +1,4 @@
-import type { FormInstance } from "element-plus";
+import { ElOption, type FormInstance } from "element-plus";
 import type { VNode } from "vue";
 import type { IFormItemConfig } from "@/hooks/useBaseComponents";
 import { defineComponent, resolveComponent } from "vue";
@@ -17,14 +17,8 @@ export default defineComponent({
   },
   setup(props, ctx) {
     const { emit, attrs, expose, slots } = ctx;
-    console.log(ctx);
     const formRef = ref<FormInstance>();
 
-    // onMounted(() => {
-    //   if (formRef.value) {
-    //     emit("initFinish", formRef.value);
-    //   }
-    // });
     expose({ formRef });
     // 渲染组件
     const renderComponent = (
@@ -32,15 +26,34 @@ export default defineComponent({
       parentProps: any,
       ctx: any
     ) => {
-      const { is, prop } = componentData;
+      const { is, prop, options, ...rest } = componentData;
       if (is) {
         if (prop) {
-          return h(resolveComponent(is), {
-            modelValue: parentProps.modelValue[prop as string],
-            onInput(value: string) {
-              parentProps.modelValue[prop as string] = value;
+          return h(
+            resolveComponent(is),
+            {
+              modelValue: parentProps.modelValue[prop as string],
+              "onUpdate:modelValue": (value: any) => {
+                parentProps.modelValue[prop as string] = value;
+              },
+              ...rest,
             },
-          });
+            () => {
+              if (options) {
+                const optionDom: VNode[] = [];
+                options.forEach((row: { label: string; value: string }) => {
+                  optionDom.push(
+                    h(ElOption, {
+                      label: row.label,
+                      value: row.value,
+                      disabled: false,
+                    })
+                  );
+                });
+                return optionDom;
+              }
+            }
+          );
         }
         return h(resolveComponent(is), {});
       }

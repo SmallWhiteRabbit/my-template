@@ -21,6 +21,16 @@ const filterList = [
     prop: "delStatus",
     label: "状态",
   },
+  {
+    is: "el-select",
+    prop: "delStatus",
+    label: "状态",
+  },
+  {
+    is: "el-select",
+    prop: "delStatus",
+    label: "状态",
+  },
 ];
 
 export const formRules = {

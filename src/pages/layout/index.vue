@@ -1,10 +1,17 @@
 <template>
-  <navCom />
-  <router-view></router-view>
+  <header>
+    <navCom />
+  </header>
+  <div class="main"><router-view></router-view></div>
 </template>
 <script setup lang="ts">
 import navCom from "@/components/layout/nav.vue";
-import { ref } from "vue";
-const value1 = ref("");
 </script>
-<style scoped></style>
+<style scoped lang="less">
+header {
+  height: 40px;
+}
+.main {
+  height: calc(100% - 40px);
+}
+</style>

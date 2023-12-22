@@ -28,12 +28,13 @@ export default defineComponent({
             inline={true}
             formList={props.formList}
             vModel={props.modelValue}
-          ></Myform>
-          <div class="my-filter-btn">
-            {props.btnList.map((item) => {
-              return <el-button {...item}> {item.label}</el-button>;
-            })}
-          </div>
+          >
+            <div class="my-filter-btn el-form-item">
+              {props.btnList.map((item) => {
+                return <el-button {...item}> {item.label}</el-button>;
+              })}
+            </div>
+          </Myform>
         </div>
       );
     };

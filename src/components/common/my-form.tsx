@@ -1,9 +1,8 @@
 import type { FormInstance } from "element-plus";
 import type { VNode } from "vue";
 import type { IFormItemConfig } from "@/hooks/useBaseComponents";
-import { defineComponent, renderSlot, resolveComponent } from "vue";
+import { defineComponent, resolveComponent } from "vue";
 import { renderSlots } from "@/hooks/useBaseComponents";
-import console from "console";
 
 export default defineComponent({
   name: "my-form",
@@ -17,7 +16,8 @@ export default defineComponent({
     },
   },
   setup(props, ctx) {
-    const { emit, attrs, expose } = ctx;
+    const { emit, attrs, expose, slots } = ctx;
+    console.log(ctx);
     const formRef = ref<FormInstance>();
 
     // onMounted(() => {
@@ -72,6 +72,7 @@ export default defineComponent({
               </el-form-item>
             );
           })}
+          {slots.default ? renderSlots("", ctx) : ""}
         </el-form>
       );
     };

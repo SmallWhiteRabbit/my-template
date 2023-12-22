@@ -27,10 +27,13 @@ export default defineConfig({
   css: {
     // css预处理器
     preprocessorOptions: {
-      less: {
-        charset: false,
-        javascriptEnabled: true,
-        additionalData: `@import "@/assets/styles/variables.less";`,
+      // less: {
+      //   charset: false,
+      //   javascriptEnabled: true,
+      //   additionalData: `@import "@/assets/styles/variables.less";`,
+      // },
+      scss: {
+        additionalData: `@use "@/assets/styles/variables.scss" as *;`,
       },
     },
   },

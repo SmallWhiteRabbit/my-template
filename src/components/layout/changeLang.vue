@@ -32,6 +32,7 @@ function handleCommand(command: any) {
 <style lang="less" scoped>
 .el-dropdown {
   vertical-align: middle;
+  color: #fff;
 }
 .el-dropdown-link {
   font-size: 20px;

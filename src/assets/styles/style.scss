@@ -58,6 +58,7 @@ button:focus-visible {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 #app {
   max-width: 1280px;
@@ -81,4 +82,10 @@ button:focus-visible {
 .my-filter-btn {
   flex: 1;
   display: inline-block;
+}
+
+.el-pagination {
+  margin-top: 20px;
+  text-align: right;
+  justify-content: flex-end;
 }

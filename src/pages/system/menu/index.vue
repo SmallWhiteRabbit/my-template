@@ -72,7 +72,7 @@ const btnList = [
   {
     label: "编辑",
     icon: "",
-    type: "link",
+    type: "success",
     onClick() {
       drawerRef.value.visible = true;
     },

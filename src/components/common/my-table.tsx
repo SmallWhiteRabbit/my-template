@@ -1,7 +1,6 @@
 import type { ITableColumnConfig } from "@/hooks/useBaseComponents";
 import { defineComponent, renderSlot, resolveComponent } from "vue";
 import { renderSlots } from "@/hooks/useBaseComponents";
-import console from "console";
 export default defineComponent({
   name: "my-table",
   props: {
@@ -32,7 +31,7 @@ export default defineComponent({
                     slotName ? (
                       renderSlots(slotName || "", ctx, props)
                     ) : (
-                      <div>{prop ?props?.row[prop] :''}</div>
+                      <div>{prop ? props?.row[prop] : ""}</div>
                     ),
                   //在这里实现自定义内容，参数是props，比如要自定义显示图片就可以<img :src="props.row.image"/>
                 }}

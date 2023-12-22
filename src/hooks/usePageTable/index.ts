@@ -2,7 +2,7 @@ import { reactive, ref } from "vue";
 
 export default function usePageTable(
   queryParams: Object,
-  listFunc?: (arg0: {
+  listFunc: (arg0: {
     constructor: Function;
     toString(): string;
     toLocaleString(): string;

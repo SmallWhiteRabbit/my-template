@@ -1,4 +1,7 @@
-import type { IFormItemConfig, IBtnConfigItem } from "@/hooks/useBaseComponents";
+import type {
+  IFormItemConfig,
+  IBtnConfigItem,
+} from "@/hooks/useBaseComponents";
 import Myform from "@/components/common/my-form";
 export default defineComponent({
   name: "my-filter",
@@ -28,7 +31,7 @@ export default defineComponent({
           ></Myform>
           <div class="my-filter-btn">
             {props.btnList.map((item) => {
-              return <el-button> {item.label}</el-button>;
+              return <el-button {...item}> {item.label}</el-button>;
             })}
           </div>
         </div>

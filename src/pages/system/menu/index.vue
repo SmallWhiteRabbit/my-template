@@ -14,6 +14,12 @@
       <el-button>删除</el-button>
     </template>
   </my-table>
+  <my-pagination
+    :total="pageInfo.total"
+    v-model:page="pageInfo.pageNum"
+    v-model:limit="pageInfo.pageSize"
+    @pagination="getList"
+  ></my-pagination>
 
   <my-dialog-form
     :title="'标题'"
@@ -27,6 +33,7 @@
 <script setup lang="ts">
 import { filterList, tableList, formList, formRules } from "./config.ts";
 import usePageTable from "@/hooks/usePageTable";
+import { getDataList } from "@/api/menu";
 const State = reactive({
   filterData: {
     menuName: "",
@@ -35,7 +42,10 @@ const State = reactive({
   formData: {},
 });
 const dialogRef = ref();
-const { pageInfo, getList, tableData } = usePageTable(State.filterData);
+const { pageInfo, getList, tableData } = usePageTable(
+  State.filterData,
+  getDataList
+);
 const btnList = [
   {
     label: "查询",

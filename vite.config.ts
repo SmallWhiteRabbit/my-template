@@ -4,7 +4,6 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-
 import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,13 +14,13 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    vueJsx(),
+    vueJsx(), // 支持jsx
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ importStyle: false })],
       imports: ["vue", "vue-router", "pinia"],
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({ importStyle: false })],
     }),
   ],
   css: {

@@ -22,6 +22,7 @@ export default function usePageTable(
   const tableData = ref([]);
 
   const getList = () => {
+    if (!listFunc) return;
     return new Promise((resolve, reject) => {
       listFunc({
         pageNum: pageInfo.pageNum,

@@ -4,7 +4,7 @@
     :formList="filterList"
     :btnList="btnList"
   />
-  <my-table :tableList="tableList" :data="tableData" height="400px">
+  <my-table :tableList="tableList" :data="tableData">
     <template #delStatus="scope">
       {{ scope.row.delStatus == 1 ? "删除" : "有效" }}
     </template>

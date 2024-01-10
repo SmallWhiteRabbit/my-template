@@ -1,3 +1,4 @@
+@import "element-plus/dist/index.css";
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -61,7 +62,6 @@ button:focus-visible {
   box-sizing: border-box;
 }
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   height: 100%;
 }

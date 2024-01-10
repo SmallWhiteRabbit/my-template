@@ -1,4 +1,20 @@
 export default {
   login: "登录",
   home: "首页",
+  search: "查询",
+  edit: "编辑",
+  add: "新增",
+  del: "删除",
+  options: "操作",
+  createDate: "创建日期",
+  updateDate: "更新日期",
+  endDate: "结束日期",
+  menu: {
+    name: "菜单名称",
+    id: "序号",
+    status: "状态",
+    url: "路由地址",
+    icon: "图标",
+    sort: "排序",
+  },
 };

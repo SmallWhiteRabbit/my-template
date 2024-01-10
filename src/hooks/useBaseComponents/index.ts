@@ -9,6 +9,8 @@ export interface IFormItemConfig {
   slotName?: string;
   prop: string;
   options?: [];
+  label?: string;
+  trans: true;
 }
 
 export interface IBtnConfigItem {

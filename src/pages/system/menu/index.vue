@@ -9,9 +9,9 @@
       {{ scope.row.delStatus == 1 ? "删除" : "有效" }}
     </template>
     <template #options="scope">
-      <el-button>编辑</el-button>
+      <el-button> {{ $t("edit") }}</el-button>
       <el-button> {{ scope.row.delStatus == 1 ? "启用" : "停用" }}</el-button>
-      <el-button>删除</el-button>
+      <el-button>{{ $t("del") }}</el-button>
     </template>
   </my-table>
   <my-pagination
@@ -58,11 +58,11 @@ const { pageInfo, getList, tableData } = usePageTable(
 );
 const btnList = [
   {
-    label: "查询",
+    label: "search",
     icon: "",
   },
   {
-    label: "新增",
+    label: "add",
     icon: "",
     type: "primary",
     onClick() {
@@ -70,7 +70,7 @@ const btnList = [
     },
   },
   {
-    label: "编辑",
+    label: "edit",
     icon: "",
     type: "success",
     onClick() {

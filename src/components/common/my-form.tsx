@@ -3,6 +3,7 @@ import type { VNode } from "vue";
 import type { IFormItemConfig } from "@/hooks/useBaseComponents";
 import { defineComponent, resolveComponent } from "vue";
 import { renderSlots } from "@/hooks/useBaseComponents";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "my-form",
@@ -18,6 +19,7 @@ export default defineComponent({
   setup(props, ctx) {
     const { emit, attrs, expose, slots } = ctx;
     const formRef = ref<FormInstance>();
+    const { t } = useI18n();
 
     expose({ formRef });
     // 渲染组件
@@ -78,7 +80,7 @@ export default defineComponent({
             return renderFormItem ? (
               renderFormItem(item, props, ctx)
             ) : (
-              <el-form-item {...rest}>
+              <el-form-item {...rest} label={item.label ? t(item.label) : ""}>
                 {renderItem
                   ? renderItem(item, props, ctx)
                   : renderComponents(item, props, ctx)}

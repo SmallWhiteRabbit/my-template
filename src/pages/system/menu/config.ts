@@ -2,30 +2,30 @@ const formList = [
   {
     is: "el-input",
     prop: "menuName",
-    label: "菜单名称",
+    label: "menu.name",
   },
   {
     is: "el-select",
     prop: "delStatus",
-    label: "状态",
+    label: "menu.status",
   },
 ];
 const filterList = [
   {
     is: "el-input",
     prop: "menuName",
-    label: "菜单名称",
+    label: "menu.name",
   },
   {
     is: "el-select",
     prop: "delStatus",
-    label: "状态",
+    label: "menu.status",
     options: [{ label: "ii", value: 0 }],
   },
   {
     is: "el-date-picker",
     prop: "createTime",
-    label: "创建日期",
+    label: "createDate",
     type: "daterange",
   },
 ];
@@ -34,13 +34,13 @@ export const formRules = {
   menuName: { required: true },
 };
 const tableList = [
-  { prop: "id", label: "序号" },
-  { prop: "menuName", label: "菜单名称" },
-  { slotName: "delStatus", label: "状态" },
-  { prop: "menuUrl", label: "路由地址" },
-  { prop: "menuIcon", label: "图标" },
-  { prop: "sortNum", label: "排序" },
-  { prop: "createTime", label: "创建日期", width: 200 },
-  { slotName: "options", label: "操作", fixed: "right", width: 200 },
+  { prop: "id", label: "menu.id" },
+  { prop: "menuName", label: "menu.name" },
+  { slotName: "delStatus", label: "menu.status" },
+  { prop: "menuUrl", label: "menu.url" },
+  { prop: "menuIcon", label: "menu.icon" },
+  { prop: "sortNum", label: "menu.sort" },
+  { prop: "createTime", label: "createDate", width: 200 },
+  { slotName: "options", label: "options", fixed: "right", width: 200 },
 ];
 export { formList, tableList, filterList };

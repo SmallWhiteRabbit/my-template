@@ -1,6 +1,7 @@
 import type { ITableColumnConfig } from "@/hooks/useBaseComponents";
 import { defineComponent, renderSlot, resolveComponent } from "vue";
 import { renderSlots } from "@/hooks/useBaseComponents";
+import { useI18n } from "vue-i18n";
 export default defineComponent({
   name: "my-table",
   props: {
@@ -15,16 +16,21 @@ export default defineComponent({
   setup(props, ctx) {
     const { emit, attrs } = ctx;
     const { treeProps } = attrs;
+    const { t } = useI18n();
     return (): JSX.Element => {
       return (
         <el-table data={props.data} border {...attrs}>
           {props.tableList.map((item) => {
-            const { slotName, prop, ...rest } = item;
+            const { slotName, prop, label, ...rest } = item;
+
             if (treeProps) {
-              return <el-table-column {...rest}></el-table-column>;
+              return (
+                <el-table-column label={t(label)} {...rest}></el-table-column>
+              );
             }
             return (
               <el-table-column
+                label={t(label)}
                 {...rest}
                 v-slots={{
                   default: (props: Record<"row", any>) =>

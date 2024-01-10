@@ -3,6 +3,8 @@ import type {
   IBtnConfigItem,
 } from "@/hooks/useBaseComponents";
 import Myform from "@/components/common/my-form";
+import { useI18n } from "vue-i18n";
+
 export default defineComponent({
   name: "my-filter",
   props: {
@@ -20,6 +22,8 @@ export default defineComponent({
   },
   components: { Myform },
   setup(props, ctx) {
+    const { t } = useI18n();
+
     return (): JSX.Element => {
       return (
         <div class="my-filter">
@@ -31,7 +35,7 @@ export default defineComponent({
           >
             <div class="my-filter-btn el-form-item">
               {props.btnList.map((item) => {
-                return <el-button {...item}> {item.label}</el-button>;
+                return <el-button {...item}> {t(item.label)}</el-button>;
               })}
             </div>
           </Myform>

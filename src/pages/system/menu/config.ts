@@ -13,7 +13,7 @@ const formList = [
 const filterList = [
   {
     is: "el-input",
-    prop: "menuName",
+    prop: "name",
     label: "menu.name",
   },
   {
@@ -35,9 +35,9 @@ export const formRules = {
 };
 const tableList = [
   { prop: "id", label: "menu.id" },
-  { prop: "menuName", label: "menu.name" },
+  { prop: "name", label: "menu.name" },
   { slotName: "delStatus", label: "menu.status" },
-  { prop: "menuUrl", label: "menu.url" },
+  { prop: "path", label: "menu.url" },
   { prop: "menuIcon", label: "menu.icon" },
   { prop: "sortNum", label: "menu.sort" },
   { prop: "createTime", label: "createDate", width: 200 },

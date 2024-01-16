@@ -8,6 +8,5 @@
 - npm i vue-i18n 国际化 element-plus 多语言切换
 - npm i less
 
-- vite-plugin-style-import 解决 样式不自动引入问题
-
-- 测试
+-- 一键换肤方案实施
+-- 多语言配置

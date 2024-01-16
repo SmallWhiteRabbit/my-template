@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import { filterList, tableList, formList, formRules } from "./config.ts";
 import usePageTable from "@/hooks/usePageTable";
-import { getDataList } from "@/api/menu";
+import { getMenuList } from "@/api/menu";
 const State = reactive({
   filterData: {
     menuName: "",
@@ -54,7 +54,7 @@ const dialogRef = ref();
 const drawerRef = ref();
 const { pageInfo, getList, tableData } = usePageTable(
   State.filterData,
-  getDataList
+  getMenuList
 );
 const btnList = [
   {

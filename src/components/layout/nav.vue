@@ -14,7 +14,6 @@ import info from "./info.vue";
 <style scoped lang="scss">
 header {
   height: 64px;
-  background-color: $color-primary;
   line-height: 64px;
   display: flex;
   justify-content: space-between;

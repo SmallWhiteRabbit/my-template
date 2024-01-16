@@ -6,7 +6,7 @@ import pinia from "@/store";
 import router from "@/router";
 import i18n from "@/locales";
 import { componentPligin } from "@/components/index";
-
+import "@/mock";
 createApp(App)
   .use(pinia)
   .use(componentPligin)

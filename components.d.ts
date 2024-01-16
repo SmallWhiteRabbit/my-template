@@ -16,10 +16,18 @@ declare module 'vue' {
     ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
     ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElSubMen: typeof import('element-plus/es')['ElSubMen']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Info: typeof import('./src/components/layout/info.vue')['default']
+    LeftSide: typeof import('./src/components/layout/leftSide.vue')['default']
+    Menu: typeof import('./src/components/layout/menu.vue')['default']
+    MenuItem: typeof import('./src/components/layout/menuItem.vue')['default']
     Nav: typeof import('./src/components/layout/nav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Side: typeof import('./src/components/layout/left Side.vue')['default']
   }
 }

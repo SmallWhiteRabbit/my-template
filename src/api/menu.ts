@@ -7,3 +7,11 @@ export const getDataList = (params?: Object) => {
     data: params,
   });
 };
+
+export const getMenuList = (params?: Object) => {
+  return request({
+    url: "/system/menu",
+    method: "post",
+    data: params,
+  });
+};

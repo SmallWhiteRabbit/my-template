@@ -31,6 +31,7 @@ class HttpRequest {
     //   相应拦截
     instance.interceptors.response.use(
       (response) => {
+        console.log(response);
         //登录失效
         if (response.data.code === "401") {
           // 清空token

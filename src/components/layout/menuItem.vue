@@ -1,7 +1,7 @@
 <template>
   <el-sub-menu :index="props.data.path" v-if="props.data.children">
     <template #title>
-      {{ props.data.name }}
+      {{ $t(props.data.name) }}
     </template>
     <template v-if="props.data.children">
       <menu-item
@@ -14,7 +14,7 @@
     </template>
   </el-sub-menu>
   <el-menu-item v-else :index="props.data.path" @click="toNextFn(props.data)">
-    {{ props.data.name }}
+    {{ $t(props.data.name) }}
   </el-menu-item>
 </template>
 <script setup lang="ts">

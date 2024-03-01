@@ -9,6 +9,13 @@ export default {
   createDate: "创建日期",
   updateDate: "更新日期",
   endDate: "结束日期",
+  module: {
+    system: "系统管理",
+    menu: "菜单列表",
+    role: "角色列表",
+    user: "用户列表",
+    dict: "字典列表",
+  },
   menu: {
     name: "菜单名称",
     id: "序号",

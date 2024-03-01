@@ -20,6 +20,7 @@ header {
   align-items: center;
   padding: 0 20px;
   align-content: center;
+  box-shadow: 0 1px 4px #00152914;
 }
 .left {
   display: flex;

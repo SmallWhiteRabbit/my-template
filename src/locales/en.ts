@@ -9,6 +9,13 @@ export default {
   createDate: "Create Date",
   updateDate: "Update Date",
   endDate: "End Date",
+  module: {
+    system: "System Management",
+    menu: "Menu List",
+    role: "Role List",
+    user: "User List",
+    dict: "Dict List",
+  },
   menu: {
     name: "Menu Name",
     id: "Number",

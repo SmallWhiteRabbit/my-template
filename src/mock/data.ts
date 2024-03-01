@@ -1,14 +1,14 @@
 export const menuList = [
   {
     id: 1,
-    name: "系统管理",
+    name: "module.system",
     path: "/system",
     status: true,
     children: [
-      { id: 101, name: "菜单列表", path: "/system/menu", status: true },
-      { id: 102, name: "用户列表", path: "/system/user", status: true },
-      { id: 103, name: "角色列表", path: "/system/role", status: true },
-      { id: 104, name: "字典列表", path: "/system/dict", status: true },
+      { id: 101, name: "module.menu", path: "/system/menu", status: true },
+      { id: 102, name: "module.user", path: "/system/user", status: true },
+      { id: 103, name: "module.role", path: "/system/role", status: true },
+      { id: 104, name: "module.dict", path: "/system/dict", status: true },
     ],
   },
 ];

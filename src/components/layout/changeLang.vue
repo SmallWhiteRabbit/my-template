@@ -5,7 +5,11 @@
     </span>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item v-for="lang in langs" :command="lang" :key="lang">
+        <el-dropdown-item
+          v-for="(lang, index) in langs"
+          :command="lang"
+          :key="index"
+        >
           <div>
             <p>{{ lang.title }} <br /></p>
             <p v-if="lang.desc">{{ lang.desc }}</p>

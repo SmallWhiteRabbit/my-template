@@ -20,7 +20,7 @@ export default defineConfig({
       imports: ["vue", "vue-router", "pinia"],
     }),
     Components({
-      resolvers: [ElementPlusResolver({ importStyle: false })],
+      resolvers: [ElementPlusResolver({ importStyle: "sass" })],
     }),
   ],
   css: {

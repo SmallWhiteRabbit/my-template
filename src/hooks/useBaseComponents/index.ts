@@ -1,4 +1,3 @@
-import console from "console";
 import type { Slot } from "vue";
 import { defineComponent, renderSlot, resolveComponent } from "vue";
 

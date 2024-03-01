@@ -2,13 +2,15 @@
   <header>
     <div></div>
     <div class="left">
-      <changeLang />
+      <ChangeTheme />
+      <ChangeLang />
       <info />
     </div>
   </header>
 </template>
 <script setup lang="ts">
-import changeLang from "./changeLang.vue";
+import ChangeLang from "./changeLang.vue";
+import ChangeTheme from "./changeTheme.vue";
 import info from "./info.vue";
 </script>
 <style scoped lang="scss">
